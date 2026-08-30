@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Slide2PPT reconstructs editable PowerPoint slides from reference images with large models."
+    />
+    <title>Slide2PPT | Editable slide reconstruction</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="Slide2PPT home">
+          <span class="brand-mark" aria-hidden="true">S2</span>
+          <span>Slide2PPT</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#method">Method</a>
+          <a href="#showcase">Showcase</a>
+          <a class="nav-repo" href="https://github.com/Slide2PPT/Slide2PPT" target="_blank" rel="noreferrer">
+            <span aria-hidden="true">↗</span> GitHub
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-inner">
+          <div class="intro-copy">
+            <p class="eyebrow">Large models · visual refinement · editable output</p>
+            <h1 id="page-title">Reconstructing editable PowerPoint slides from images.</h1>
+            <p class="intro-text">
+              Slide2PPT turns a reference slide into a structured PowerPoint file. Follow each example from the original image, through staged generation and iterative refinement, to the final editable composition.
+            </p>
+            <div class="intro-links">
+              <a class="button button-primary" href="#showcase">Explore the showcase <span aria-hidden="true">↓</span></a>
+              <a class="button button-quiet" href="https://github.com/Slide2PPT/Slide2PPT" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
+          <div class="intro-visual" aria-label="A preview of the reconstruction pipeline">
+            <div class="visual-label">One slide, three outcomes</div>
+            <div class="visual-flow">
+              <div class="flow-step">
+                <span class="flow-index">01</span>
+                <span class="flow-name">Reference</span>
+                <span class="flow-caption">Image input</span>
+              </div>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <div class="flow-step flow-step-accent">
+                <span class="flow-index">02</span>
+                <span class="flow-name">Refine</span>
+                <span class="flow-caption">Four animated stages</span>
+              </div>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <div class="flow-step">
+                <span class="flow-index">03</span>
+                <span class="flow-name">Edit</span>
+                <span class="flow-caption">Object-level output</span>
+              </div>
+            </div>
+            <div class="visual-rule" aria-hidden="true"></div>
+            <p class="visual-footnote">Generation / initial → global → final → iterative refinement / final</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="method-band" id="method" aria-labelledby="method-title">
+        <div class="section-shell method-inner">
+          <div>
+            <p class="eyebrow eyebrow-dark">The pipeline</p>
+            <h2 id="method-title">A visual record of reconstruction.</h2>
+          </div>
+          <p class="method-copy">
+            Every row below keeps the source and result side by side. The center GIF is generated from the same four render checkpoints used during reconstruction.
+          </p>
+        </div>
+      </section>
+
+      <section class="showcase-section" id="showcase" aria-labelledby="showcase-title">
+        <div class="section-shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow eyebrow-dark">Reconstruction showcase</p>
+              <h2 id="showcase-title">Reference → process → editable result</h2>
+            </div>
+            <p class="section-count"><span id="slide-count">12</span> examples</p>
+          </div>
+
+          <div class="showcase-head" aria-hidden="true">
+            <span>Reference image</span>
+            <span>Generation + iterative refinement</span>
+            <span>Editable PowerPoint result</span>
+          </div>
+          <div class="showcase-grid" id="showcase-grid"></div>
+          <noscript>
+            <p class="noscript-note">Enable JavaScript to load the reconstruction examples.</p>
+          </noscript>
+        </div>
+      </section>
+
+      <section class="repo-section" aria-labelledby="repo-title">
+        <div class="section-shell repo-inner">
+          <div class="repo-copy">
+            <p class="eyebrow">Open source project</p>
+            <h2 id="repo-title">See the implementation on GitHub.</h2>
+            <p>
+              Read the full project README, inspect the generation assets, and follow the work as Slide2PPT evolves.
+            </p>
+            <a class="button button-primary" href="https://github.com/Slide2PPT/Slide2PPT" target="_blank" rel="noreferrer">
+              Open Slide2PPT on GitHub <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <a class="qr-link" href="https://github.com/Slide2PPT/Slide2PPT" target="_blank" rel="noreferrer" aria-label="Open the Slide2PPT GitHub repository">
+            <img src="assets/readme/github-repository-qr.png" alt="QR code linking to the Slide2PPT GitHub repository" />
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <span>Slide2PPT</span>
+        <span>Reconstructing editable slides with large models</span>
+        <a href="https://github.com/Slide2PPT/Slide2PPT" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-caption">
+      <div class="lightbox-bar">
+        <p id="lightbox-caption"></p>
+        <button class="icon-button" id="lightbox-close" type="button" aria-label="Close image preview" title="Close preview">×</button>
+      </div>
+      <div class="lightbox-body">
+        <img id="lightbox-image" src="" alt="" />
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
