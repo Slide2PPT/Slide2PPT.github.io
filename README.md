@@ -3,7 +3,7 @@
 </h2>
 
 <p align="center">
-  <a href="https://github.com/Slide2PPT/Slide2PPT.github.io" style="margin: 0 10px;">🌐 Homepage</a>
+  <a href="https://slide2ppt.github.io/" style="margin: 0 10px;">🌐 Homepage</a>
   <span style="margin: 0 10px;">🎞️ Dataset (Coming Soon)</span> |
   <span style="margin: 0 10px;">📖 Paper (Coming Soon)</span>
 </p>
